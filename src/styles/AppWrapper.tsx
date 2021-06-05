@@ -1,10 +1,16 @@
 import styled from "styled-components";
 
 const AppWrapper = styled.div.attrs(({ className }) => ({
-  className: `App AppWrapper ${className}`,
-}))`
-  display: block;
-  border: 1px solid red;
-`;
+  className: `app-wrapper ${className}`,
+}))``;
+
+const MainHeaderWrapper = styled.header.attrs(() => ({
+  className: 'main-header-wrapper',
+}))``;
+
+const MainBodyWrapper = styled.div.attrs(() => ({
+  className: 'main-body-wrapper',
+}))``;
 
 export default AppWrapper;
+export { MainHeaderWrapper, MainBodyWrapper };

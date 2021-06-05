@@ -1,1 +1,14 @@
 @import "sass/index";
+
+.app-wrapper {
+
+  .main-header-wrapper {
+    padding: 10px 0;
+    background-color: map-get($colors, 'primary');
+  }
+
+  .main-body-wrapper {
+    max-width: $mainMaxWidth;
+    margin: 0 auto;
+  }
+}
