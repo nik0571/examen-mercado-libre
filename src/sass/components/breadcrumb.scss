@@ -2,4 +2,17 @@
   padding: 16px 0;
   font-size: calculate-rem(map-get($fonts-sizes, 'small'));
   color: map-get($colors, 'fifth');
+
+  span {
+    &::after {
+      content: ' > ';
+    }
+
+    &:last-of-type {
+      font-weight: $font-bold;
+      &::after {
+        content: '';
+      }
+    }
+  }
 }

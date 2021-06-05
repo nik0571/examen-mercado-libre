@@ -1,10 +1,23 @@
 import React from "react";
+interface IBreadcrumbComponent {
+  attributes?: string[];
+}
 
-const BreadcrumbComponent: React.FC = () => {
+const BreadcrumbComponent: React.FC<IBreadcrumbComponent> = ({
+  attributes = [],
+}) => {
+  console.info("attributes", attributes);
 
   return (
     <div className="breadcrumb-wrapper">
-      {'Electronica, Audio y Video > ipod > Reproductores > Ipand Touch > 32 GB'}
+      {
+        attributes
+        .map((attr) => {
+          return (
+            <span key={attr}>{attr}</span>
+          )
+        })
+      }
     </div>
   );
 };
