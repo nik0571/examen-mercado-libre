@@ -1,0 +1,66 @@
+$directions: (
+  "l": "left",
+  "r": "right",
+  "t": "top",
+  "b": "bottom",
+) !default;
+
+@each $key, $value in $font-families {
+  .font-f-#{$key} {
+    font-family: $value;
+  }
+}
+
+@each $color, $colorValue in $colors {
+  .color-#{$color} {
+    color: $colorValue;
+  }
+
+  .bg-color-#{$color} {
+    background-color: $colorValue;
+  }
+
+  .bd-color-#{$color} {
+    border-color: $colorValue;
+  }
+
+  @each $direction, $directionValue in $directions {
+    .bd-color-#{$direction}-#{$color} {
+      border-#{$directionValue}-color: $colorValue;
+    }
+  }
+}
+
+.btn {
+  border-radius: 5px;
+  border-color: transparent;
+  padding: 5px 10px;
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-size: calculate-rem($font-size-default);
+  text-align: center;
+  text-decoration: none;
+  transition: 0.3s;
+
+
+  @each $color, $colorValue in $colors {
+    &.btn-#{$color} {
+      background-color: $colorValue;
+      color: calc-text-color($colorValue);
+    }
+  }
+}
+
+@each $key, $value in $fonts-sizes {
+  .text-size-#{$key} {
+    font-size: calculate-rem($value);
+  }
+}
+
+@each $key, $value in $font-weights {
+  .font-w-#{$key} {
+    font-weight: $value;
+  }
+}
+
