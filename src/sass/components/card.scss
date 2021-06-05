@@ -1,0 +1,65 @@
+$cardMainGap: 16px;
+
+.card-wrapper {
+  position: relative;
+  padding: $cardMainGap;
+  display: grid;
+  grid-template-columns: 180px 66% 1fr ;
+  grid-gap: $cardMainGap;
+
+  .content-img {
+    line-height: 0;
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 101%;
+      height: auto;
+    }
+  }
+
+  .content-description {
+    padding-top: $cardMainGap;
+    .price {
+      margin-bottom: 32px;
+      font-size: calculate-rem(map-get($fonts-sizes, 'medium'));
+      font-weight: $font-regular;
+
+      .icon-free-shipping {
+        display: inline-block;
+        margin-left: 10px;
+      }
+    }
+
+    .title {
+      font-size: calculate-rem(map-get($fonts-sizes, 'normal'));
+    }
+  }
+
+  .content-metadata {
+    padding-top: $cardMainGap;
+    font-size: calculate-rem(map-get($fonts-sizes, 'extra-small'));
+
+    span {
+      color: map-get($colors, 'third');
+    }
+  }
+
+  & + .card-wrapper::after {
+    content: '';
+    height: 1px;
+    display: block;
+    width: calc(100% - #{$cardMainGap * 2});
+    position: absolute;
+    left: $cardMainGap;
+    top: 0;
+    background-color: $bgBody;
+  }
+}

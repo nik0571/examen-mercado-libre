@@ -3,5 +3,9 @@
 @import "helpers";
 @import "reset";
 
+// Views
+@import "views/Results.scss";
+
 // Components
 @import "components/main-search.scss";
+@import "components/card.scss";

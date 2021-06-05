@@ -3,9 +3,11 @@ import Logo from "../../assets/Logo_ML.png";
 import IconSearch from "../../assets/ic_Search.png";
 import { useHistory } from "react-router-dom";
 import { APP_ROUTE_PATHS } from "constants/routes";
+import { parse } from 'query-string';
 
-const SearchComponent: React.FC<any> = () => {
-  const [inputValue, setInputValue] = useState<string>("");
+const SearchComponent: React.FC = () => {
+  const params = parse(window.location.search);
+  const [inputValue, setInputValue] = useState<string>(params.search?.toString() || '');
   const history = useHistory();
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -29,6 +31,7 @@ const SearchComponent: React.FC<any> = () => {
           type="text"
           placeholder="Nunca dejes de buscar"
           onChange={handleInputOnChange}
+          value={inputValue}
         />
         <button type="submit" className="icon-search">
           <img src={IconSearch} width="18" alt="Icon Search" />

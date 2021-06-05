@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PageNotFoundView: React.FC<any>= () => {
+const PageNotFoundView: React.FC = () => {
   return (
     <h1>Page not found!</h1>
   );

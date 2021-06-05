@@ -5,9 +5,11 @@ $gray: #666666;
 $gray-medium: #999999;
 $gray-light: #EEEEEE;
 $blue: #3483FA;
+$white: #ffffff;
+$bgBody: $gray-light;
 
 
-$text-color-default: $gray;
+$text-color-default: $black;
 $colors: (
   'yellow': $yellow,
   'black': $black,
@@ -15,6 +17,7 @@ $colors: (
   'gray-light': $gray-light,
   'gray-medium': $gray-medium,
   'blue': $blue,
+  'white': $white,
 
   'text-color-default': $text-color-default,
 
@@ -24,6 +27,7 @@ $colors: (
   'fourth': $gray-light,
   'fifth': $gray-medium,
   'sixth': $blue,
+  'seventh': $white,
 
 );
 // FONTS

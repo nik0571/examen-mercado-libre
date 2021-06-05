@@ -1,6 +1,6 @@
 import React from 'react';
 
-const HomeView: React.FC<any>= () => {
+const HomeView: React.FC = () => {
   return (
     <h1>Home view</h1>
   );
