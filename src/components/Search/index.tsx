@@ -21,9 +21,9 @@ const SearchComponent: React.FC<any> = () => {
 
   return (
     <div className="main-search-wrapper">
-      <div className="content-logo">
+      <a href={APP_ROUTE_PATHS.HOME} className="content-logo">
         <img src={Logo} width="53" alt="Logo" />
-      </div>
+      </a>
       <form className="content-input" onSubmit={handleSubmit}>
         <input
           type="text"
