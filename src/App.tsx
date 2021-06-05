@@ -1,8 +1,17 @@
+import { Route, Switch } from 'react-router-dom';
+import AppWrapper from 'styles/AppWrapper';
+import HomeView from 'views/Home';
+import PageNotFoundView from 'views/PageNotFound';
 import './App.scss';
 
 function App() {
   return (
-    <div className="App"></div>
+    <AppWrapper>
+      <Switch>
+        <Route path="/" component={HomeView} exact />
+        <Route component={PageNotFoundView} />
+      </Switch>
+    </AppWrapper>
   );
 }
 
