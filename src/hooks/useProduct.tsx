@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { getProduct } from "../services";
-import { IResult } from "./interfaces/result";
+import { IProduct } from "./interfaces/product";
 
 function useProduct() {
-  const [results, setResults] = useState<IResult[]>([]);
+  const [product, setProduct] = useState<IProduct>();
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<boolean>(false);
 
@@ -11,7 +11,7 @@ function useProduct() {
     setLoading(true);
     getProduct(id)
       .then((response) => {
-        setResults(response);
+        setProduct(response);
         return response;
       })
       .catch(() => {
@@ -20,7 +20,7 @@ function useProduct() {
       .finally(() => setLoading(false));
   };
 
-  return { fetch, results, loading, error };
+  return { fetch, product, loading, error };
 }
 
 export { useProduct };

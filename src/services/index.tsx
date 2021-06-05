@@ -38,9 +38,9 @@ const getProduct = (id: string) => {
   });
 
   return axios.all([productRequest, descriptionRequest])
-  .then(axios.spread(({ data: dataProduct }, { data: dataDescription}) => {
+  .then(axios.spread(({ data }, { data: dataDescription}) => {
     return {
-      product: dataProduct,
+      data,
       description: dataDescription
     };
   })).catch(errors => {

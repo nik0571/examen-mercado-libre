@@ -1,0 +1,64 @@
+.product-wrapper {
+  background-color: map-get($colors, 'seventh');
+  display: grid;
+  grid-template-columns: 67% 1fr;
+  grid-gap: 16px;
+  padding-bottom: 100px;
+  padding: 32px;
+  border-radius: 4px;
+
+  .content-left {
+    .content-img {
+      width: 100%;
+      max-width: 680px;
+      height: 0%;
+      margin: 0 auto;
+      padding-top: 100%;
+      position: relative;
+
+      img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: auto;
+        height: 100%;
+      }
+    }
+
+    .content-description {
+      .title {
+        font-size: calculate-rem(map-get($fonts-sizes, 'big'));
+        margin-bottom: 32px;
+      }
+
+      .text {
+        color: map-get($colors, 'fifth'),
+      }
+    }
+  }
+  .content-right {
+
+    .condition {
+      font-size: calculate-rem(map-get($fonts-sizes, 'small'));
+      margin-bottom: 16px;
+    }
+
+    .title {
+      font-size: calculate-rem(map-get($fonts-sizes, 'medium'));
+    }
+
+    .price {
+      margin: 32px 0;
+      font-size: calculate-rem(map-get($fonts-sizes, 'extra-big'));
+      sup {
+        font-size: calculate-rem(map-get($fonts-sizes, 'normal'));
+      }
+    }
+
+    .btn {
+      width: 100%;
+      max-width: 200px
+    }
+  }
+}

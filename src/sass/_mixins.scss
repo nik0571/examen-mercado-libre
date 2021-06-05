@@ -12,9 +12,9 @@ $font-size-default: 16px !default;
 }
 
 @function calc-text-color($color) {
-  @if (lightness($color) > 50) {
+  @if (lightness($color) > 60) {
     @return $black;
   } @else {
-    @return $gray-light;
+    @return $white;
   }
 }
