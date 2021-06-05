@@ -1,3 +1,6 @@
-.ResultsViewWrapper {
-  background-color: map-get($colors, 'seventh');
+.results-wiew-wrapper {
+
+  .content-results {
+    background-color: map-get($colors, 'seventh');
+  }
 }
