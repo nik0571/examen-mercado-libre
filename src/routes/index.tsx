@@ -1,6 +1,7 @@
 import { APP_ROUTE_PATHS } from "constants/routes";
 import { ComponentType } from "react";
 import HomeView from "views/Home";
+import ProductView from "views/Product";
 import ResultsView from "views/Results";
 
 export interface IRoutes {
@@ -19,5 +20,11 @@ export const routeList: IRoutes[] = [
   {
     path: APP_ROUTE_PATHS.ITEMS,
     Component: ResultsView,
+    exact: true,
+  },
+  {
+    path: APP_ROUTE_PATHS.PRODUCT,
+    Component: ProductView,
+    exact: true,
   },
 ];

@@ -2,6 +2,7 @@ import React from "react";
 import IconFreeShipping from '../../assets/ic_shipping.png';
 import { IResult } from "hooks/interfaces/result";
 import { formatCurrency } from "helpers";
+import { APP_ROUTE_PATHS } from "constants/routes";
 
 interface ICardComponent {
   item: IResult;
@@ -10,9 +11,9 @@ interface ICardComponent {
 const CardComponent: React.FC<ICardComponent> = ({ item }) => {
 
   return (
-    <div className="card-wrapper">
+    <a href={`${APP_ROUTE_PATHS.ITEMS}/${item.id}`} className="card-wrapper">
       <div className="content-img">
-        <img src={item.thumbnail} width="180" alt="Image" />
+        <img src={item.thumbnail} width="180" alt={ item.title } />
       </div>
       <div className="content-description">
         <h2 className="price">
@@ -28,7 +29,7 @@ const CardComponent: React.FC<ICardComponent> = ({ item }) => {
       <div className="content-metadata">
         <span>{ item.address.state_name }</span>
       </div>
-    </div>
+    </a>
   );
 };
 

@@ -6,6 +6,8 @@ $cardMainGap: 16px;
   display: grid;
   grid-template-columns: 180px 66% 1fr ;
   grid-gap: $cardMainGap;
+  text-decoration: none;
+  color: $text-color-default;
 
   .content-img {
     line-height: 0;

@@ -5,4 +5,5 @@ interface IAPP_ROUTE_PATHS {
 export const APP_ROUTE_PATHS: IAPP_ROUTE_PATHS = {
   HOME: '/',
   ITEMS: '/items',
-}
+  PRODUCT: '/items/:id'
+};
