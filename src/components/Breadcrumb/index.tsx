@@ -6,8 +6,6 @@ interface IBreadcrumbComponent {
 const BreadcrumbComponent: React.FC<IBreadcrumbComponent> = ({
   attributes = [],
 }) => {
-  console.info("attributes", attributes);
-
   return (
     <div className="breadcrumb-wrapper">
       {

@@ -10,11 +10,8 @@ interface IParams {
 
 const ProductView: React.FC = () => {
   const { id: productId } = useParams<IParams>();
-  console.info("params", productId);
 
   const { fetch, loading, product } = useProduct();
-
-  console.info("product", product);
 
   useMemo(() => {
     if (productId && !loading) {
@@ -27,7 +24,7 @@ const ProductView: React.FC = () => {
     return (
       product?.data?.attributes
         ?.filter(
-          (attr) => attr.id && attr.value_id && attr.value_name && attr.name && attr.values?.length
+          (attr) => attr.id && attr.value_id && attr.value_name && attr.name && attr.values?.length && attr.value_name === 'Sí'
         )
         .map((attr) => attr.name) || []
     );
