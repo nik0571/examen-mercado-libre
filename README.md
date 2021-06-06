@@ -1,3 +1,4 @@
 # Run
-### `npm start`
-### `npm run start:server` or `node ./server`
+
+1: ### `npm run start:server` or `node ./server`
+2: ### `npm start`
