@@ -1,6 +1,6 @@
 import React from "react";
 interface IBreadcrumbComponent {
-  attributes?: string[];
+  attributes?: any[];
 }
 
 const BreadcrumbComponent: React.FC<IBreadcrumbComponent> = ({
