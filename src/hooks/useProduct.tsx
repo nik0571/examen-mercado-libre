@@ -11,7 +11,7 @@ function useProduct() {
     setLoading(true);
     getProduct(id)
       .then((response) => {
-        setProduct(response);
+        setProduct(response.data);
         return response;
       })
       .catch(() => {

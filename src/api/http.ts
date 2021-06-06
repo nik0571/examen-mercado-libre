@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: 'https://api.mercadolibre.com/',
+  baseURL: 'http://127.0.0.1:3001/api/',
   headers: {
     "Content-type": "application/json",
     "accept": "application/json",

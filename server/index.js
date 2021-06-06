@@ -3,13 +3,15 @@ var express = require('express');
 var app = express(); //Crear nuestra aplicación w / express
 var port = process.env.PORT || 3001; //Establecer el puerto
 var http = require('http');
-var Services = require('./services'); 
+var Services = require('./services');
+var cors = require('cors');
 
 // CONFIGURACIÓN ===============================================================
 var server = http.createServer(app);
 
 
 app.use(express.static('./')); //Establecer la ubicación de los archivos estáticos
+app.use(cors());
 
 app.get('/api/items', function (req, res) {
   Services.search(req.query.q).then((data) => {
